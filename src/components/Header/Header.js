@@ -9,7 +9,7 @@ const Header = () => {
                 <Link className='fs-5 text-decoration-none text-black' to="/home">Home</Link>
                 <Link className='fs-1 text-decoration-none text-black' to="/">Fragrance Outlet</Link>
                 <Link className='fs-5 text-decoration-none text-black' to="/">Login</Link>
-            </nav>
+            </nav >
             <hr />
 
             {/* if user */}
@@ -19,7 +19,7 @@ const Header = () => {
                 <Link className='fs-5 text-decoration-none text-black' to="/">My Items</Link>
             </nav>
             <hr className='mb-0' />
-        </div>
+        </div >
     );
 };
 
