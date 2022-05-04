@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Col } from 'react-bootstrap';
+import { Button, Card, Col } from 'react-bootstrap';
 import img from '../../images/card-sample.jpg'
 
 const Inventory = ({ inventory }) => {
@@ -13,6 +13,7 @@ const Inventory = ({ inventory }) => {
                         This is a longer card with supporting text below as a natural
                         lead-in to additional content. This content is a little bit longer.
                     </Card.Text>
+                    <Button className='w-100' variant="outline-dark">Primary</Button>
                 </Card.Body>
             </Card>
         </Col>
