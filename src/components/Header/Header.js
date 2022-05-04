@@ -18,7 +18,7 @@ const Header = () => {
                 <Link className='fs-5 text-decoration-none text-black' to="/">Add Items</Link>
                 <Link className='fs-5 text-decoration-none text-black' to="/">My Items</Link>
             </nav>
-            <hr />
+            <hr className='mb-0' />
         </div>
     );
 };
