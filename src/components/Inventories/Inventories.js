@@ -10,13 +10,13 @@ const Inventories = () => {
             .then(data => setInventories(data));
     })
     return (
-        <div style={{ 'position': 'relative' }} className='mt-5 container'>
+        <div className='mt-5 container'>
             <h3 className='text-center'>Fragrance Collection</h3>
             <h6 className='text-center mb-5'>Explore the best selling perfumes of all times</h6>
             <Row xs={1} md={3} className="g-4">
                 {
                     inventories.map(inventory => <Inventory
-                        key={inventory.id}
+                        key={inventory._id}
                         inventory={inventory}
                     ></Inventory>)
                 }

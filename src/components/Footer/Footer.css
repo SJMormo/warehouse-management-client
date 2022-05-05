@@ -1,7 +1,7 @@
 .footer {
     padding-top: 1.7em;
     background: rgb(231, 250, 250);
-    position: absolute;
-    /* bottom: 0; */
+    /* position: relative;
+    bottom: 0; */
     width: 100%;
 }
