@@ -8,7 +8,7 @@ const Header = () => {
             <nav className='d-flex justify-content-evenly align-items-center'>
                 <Link className='fs-5 text-decoration-none text-black' to="/home">Home</Link>
                 <Link className='fs-1 text-decoration-none text-black' to="/">Fragrance Outlet</Link>
-                <Link className='fs-5 text-decoration-none text-black' to="/">Login</Link>
+                <Link className='fs-5 text-decoration-none text-black' to="/login">Login</Link>
             </nav >
             <hr />
 

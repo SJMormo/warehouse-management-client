@@ -4,6 +4,8 @@ import Home from './components/Home/Home';
 import Header from './components/Header/Header';
 import InventoryDetail from './components/InventoryDetail/InventoryDetail';
 import Footer from './components/Footer/Footer';
+import Register from './components/Register/Register';
+import Login from './components/Login/Login';
 
 function App() {
   return (
@@ -12,6 +14,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+
         <Route path="/inventory/:id" element={<InventoryDetail />} />
       </Routes>
       <Footer />

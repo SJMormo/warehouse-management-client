@@ -8,7 +8,7 @@ const Inventory = ({ inventory }) => {
 
     const navigate = useNavigate();
     const handleInventoryDetail = (id) => {
-        navigate(`inventory/${id}`);
+        navigate(`/inventory/${id}`);
     }
     return (
         <Col>
