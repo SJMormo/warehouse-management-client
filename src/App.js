@@ -6,6 +6,7 @@ import InventoryDetail from './components/InventoryDetail/InventoryDetail';
 import Footer from './components/Footer/Footer';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
+import RequireAuth from './components/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -17,7 +18,11 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
 
-        <Route path="/inventory/:id" element={<InventoryDetail />} />
+        <Route path="/inventory/:id" element={
+          <RequireAuth>
+            <InventoryDetail />
+          </RequireAuth>
+        } />
       </Routes>
       <Footer />
     </div>
