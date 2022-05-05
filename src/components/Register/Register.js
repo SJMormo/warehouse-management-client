@@ -48,10 +48,10 @@ const Register = () => {
                 </Form.Group>
 
                 <Button className='w-100' variant="outline-primary" type="submit">
-                    Sign Up
+                    Register
                 </Button>
                 <p className='mt-2'>
-                    Already Have an Account? <Link className="form-link" to="/login">Sign In</Link>
+                    Already Have an Account? <Link className="form-link" to="/login">Login</Link>
                 </p>
             </Form>
         </div>
