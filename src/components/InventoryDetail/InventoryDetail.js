@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Button, Card, ListGroup, ListGroupItem } from 'react-bootstrap';
+import React, { useEffect, useRef, useState } from 'react';
+import { Button, Card, Col, Form, ListGroup, ListGroupItem, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 
 const InventoryDetail = () => {
@@ -9,8 +9,7 @@ const InventoryDetail = () => {
     const { _id, name, img, price, description, supplierName } = inventoryDetail;
     let { quantity } = inventoryDetail;
 
-    const handleDelivery = () => {
-        quantity = quantity - 1;
+    function sendDataToServer() {
         const updatedQuantity = { name, img, price, quantity, description, supplierName };
 
         // send data to server
@@ -23,8 +22,23 @@ const InventoryDetail = () => {
         })
             .then(response => response.json())
             .then(result => {
-                console.log('Success:', result);
+                // console.log('Success:', result);
             });
+    }
+
+    const handleDelivery = () => {
+        quantity = quantity - 1;
+        sendDataToServer();
+    }
+
+    const reStockQuantityRef = useRef(0);
+    const handleReStock = (event) => {
+        event.preventDefault();
+        const stockQuantity = parseInt(reStockQuantityRef.current.value);
+        quantity += stockQuantity;
+        // console.log(quantity, stockQuantity);
+        sendDataToServer();
+        event.target.reset();
     }
 
 
@@ -39,8 +53,8 @@ const InventoryDetail = () => {
 
 
     return (
-        <div>
-            <Card className='mt-5 mx-auto w-75' border="light">
+        <div className='mt-5 '>
+            <Card className='mx-auto w-75' border="light">
                 <Card.Img variant="top" src={img} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
@@ -56,9 +70,20 @@ const InventoryDetail = () => {
                 </ListGroup>
                 <Card.Body>
                     <Button onClick={handleDelivery}>Delivered</Button>
-                    <Card.Link href="#">Another Link</Card.Link>
                 </Card.Body>
             </Card>
+
+            <Form onSubmit={handleReStock} className='mt-3 w-25 mx-auto'>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Restock The Items</Form.Label>
+                    <Form.Control ref={reStockQuantityRef} type="number" placeholder="Enter quantity" required />
+                </Form.Group>
+
+                <Button variant="primary" type="submit">
+                    Submit
+                </Button>
+            </Form>
+
         </div>
     );
 };
