@@ -1,10 +1,9 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import img from '../../images/card-sample.jpg'
 
 const Inventory = ({ inventory }) => {
-    const { _id, name } = inventory;
+    const { _id, name, img, description, price, quantity, supplierName } = inventory;
 
     const navigate = useNavigate();
     const handleInventoryDetail = (id) => {
@@ -13,12 +12,20 @@ const Inventory = ({ inventory }) => {
     return (
         <Col>
             <Card>
-                <Card.Img variant="top" src={img} />
+                <Card.Img variant="top" src={img} className='img-fluid p-3' />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>
-                        This is a longer card with supporting text below as a natural
-                        lead-in to additional content. This content is a little bit longer.
+                        Description: {description}
+                    </Card.Text>
+                    <Card.Text>
+                        Price: {price}
+                    </Card.Text>
+                    <Card.Text>
+                        Quantity: {quantity}
+                    </Card.Text>
+                    <Card.Text>
+                        Supplier Name: {supplierName}
                     </Card.Text>
                     <Button onClick={() => handleInventoryDetail(_id)} className='w-100' variant="outline-dark">Manage</Button>
                 </Card.Body>

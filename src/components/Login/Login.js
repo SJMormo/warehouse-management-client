@@ -3,7 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import GoogleLogin from '../../GoogleLogin/GoogleLogin';
+import GoogleLogin from '../GoogleLogin/GoogleLogin';
 import Loading from '../Loading/Loading';
 
 const Login = () => {

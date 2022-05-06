@@ -2,9 +2,9 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import auth from '../firebase.init';
-import googleIcon from '../images/google-logo.png';
-import Loading from '../components/Loading/Loading';
+import auth from '../../firebase.init';
+import googleIcon from '../../images/google-logo.png';
+import Loading from '../Loading/Loading';
 
 const GoogleLogin = () => {
     const navigate = useNavigate();

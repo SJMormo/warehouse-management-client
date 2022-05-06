@@ -1,26 +1,56 @@
 [
     {
         "_id": 1,
-        "name": "xyz"
+        "name": "xyz",
+        "img": "https://i.ibb.co/fYnCHRs/card-sample.jpg",
+        "description": "lorem lorem lorem lorem lorem lorem lorem lorem lorem",
+        "price": "2000",
+        "quantity": "5",
+        "supplierName": "Haha"
     },
     {
         "_id": 2,
-        "name": "xyz"
+        "name": "xyz",
+        "img": "https://i.ibb.co/fYnCHRs/card-sample.jpg",
+        "description": "lorem lorem lorem lorem lorem lorem lorem lorem lorem",
+        "price": "2000",
+        "quantity": "5",
+        "supplierName": "Haha"
     },
     {
         "_id": 3,
-        "name": "xyz"
+        "name": "xyz",
+        "img": "https://i.ibb.co/fYnCHRs/card-sample.jpg",
+        "description": "lorem lorem lorem lorem lorem lorem lorem lorem lorem",
+        "price": "2000",
+        "quantity": "5",
+        "supplierName": "Haha"
     },
     {
         "_id": 4,
-        "name": "xyz"
+        "name": "xyz",
+        "img": "https://i.ibb.co/fYnCHRs/card-sample.jpg",
+        "description": "lorem lorem lorem lorem lorem lorem lorem lorem lorem",
+        "price": "2000",
+        "quantity": "5",
+        "supplierName": "Haha"
     },
     {
         "_id": 5,
-        "name": "xyz"
+        "name": "xyz",
+        "img": "https://i.ibb.co/fYnCHRs/card-sample.jpg",
+        "description": "lorem lorem lorem lorem lorem lorem lorem lorem lorem",
+        "price": "2000",
+        "quantity": "5",
+        "supplierName": "Haha"
     },
     {
         "_id": 6,
-        "name": "xyz"
+        "name": "xyz",
+        "img": "https://i.ibb.co/fYnCHRs/card-sample.jpg",
+        "description": "lorem lorem lorem lorem lorem lorem lorem lorem lorem",
+        "price": "2000",
+        "quantity": "5",
+        "supplierName": "Haha"
     }
 ]
