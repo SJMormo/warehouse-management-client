@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import GoogleLogin from '../../GoogleLogin/GoogleLogin';
 import Loading from '../Loading/Loading';
 
 const Register = () => {
@@ -47,13 +48,15 @@ const Register = () => {
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
 
-                <Button className='w-100' variant="outline-primary" type="submit">
-                    Register
+                <Button className='w-100' variant="dark" type="submit">
+                    CREATE AN ACCOUNT
                 </Button>
-                <p className='mt-2'>
-                    Already Have an Account? <Link className="form-link" to="/login">Login</Link>
+                <p className='mt-2 text-center'>
+                    Already Have an Account?
                 </p>
+                <Link className="btn btn-outline-dark w-100" to="/login">LOGIN HERE</Link>
             </Form>
+            <GoogleLogin></GoogleLogin>
         </div>
     );
 };
