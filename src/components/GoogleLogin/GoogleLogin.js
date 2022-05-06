@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import googleIcon from '../../images/google-logo.png';
@@ -9,13 +9,16 @@ import Loading from '../Loading/Loading';
 const GoogleLogin = () => {
     const navigate = useNavigate();
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+    const location = useLocation();
+
+    let from = location.state?.from?.pathname || "/";
 
     if (googleLoading) {
         return <Loading></Loading>
     }
     // after signup redirect to login
     if (googleUser) {
-        navigate('/');
+        navigate(from, { replace: true });
     }
     return (
         <div>

@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
 import RequireAuth from './components/RequireAuth/RequireAuth';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
             <InventoryDetail />
           </RequireAuth>
         } />
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </div>
