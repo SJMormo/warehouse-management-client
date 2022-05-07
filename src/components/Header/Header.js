@@ -38,7 +38,7 @@ const Header = () => {
                 user ?
                     <div>
                         <nav className='d-flex justify-content-evenly align-items-center'>
-                            <Link className='fs-5 text-decoration-none text-black' to="/home">Manage Items</Link>
+                            <Link className='fs-5 text-decoration-none text-black' to="/manageinventories">Manage Items</Link>
                             <Link className='fs-5 text-decoration-none text-black' to="/">Add Items</Link>
                             <Link className='fs-5 text-decoration-none text-black' to="/">My Items</Link>
                         </nav>

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Button, Card, Col, Form, ListGroup, ListGroupItem, Row } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const InventoryDetail = () => {
     const { id } = useParams();
@@ -70,10 +70,11 @@ const InventoryDetail = () => {
                 </ListGroup>
                 <Card.Body>
                     <Button onClick={handleDelivery}>Delivered</Button>
+                    <Link className='ms-1 btn btn-outline-primary' to="/manageinventories">Manage Inventories</Link>
                 </Card.Body>
             </Card>
 
-            <Form onSubmit={handleReStock} className='mt-3 w-25 mx-auto'>
+            <Form onSubmit={handleReStock} className='mt-2 w-25 mx-auto'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Restock The Items</Form.Label>
                     <Form.Control ref={reStockQuantityRef} type="number" placeholder="Enter quantity" required />
@@ -83,7 +84,9 @@ const InventoryDetail = () => {
                     Submit
                 </Button>
             </Form>
+            <div className='d-flex justify-content-center'>
 
+            </div>
         </div>
     );
 };

@@ -56,6 +56,9 @@ const Register = () => {
                 </p>
                 <Link className="btn btn-outline-dark w-100" to="/login">LOGIN HERE</Link>
             </Form>
+            <p className='text-danger text-center mt-3'>
+                {error && error.message}
+            </p>
             <GoogleLogin></GoogleLogin>
         </div>
     );

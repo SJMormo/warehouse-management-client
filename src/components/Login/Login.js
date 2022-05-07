@@ -55,8 +55,11 @@ const Login = () => {
                 <p className='mt-2 text-center'>
                     Don't Have an Account?
                 </p>
-                <Link className="btn btn-outline-dark w-100" to="/login">REGISTER NOW</Link>
+                <Link className="btn btn-outline-dark w-100" to="/register">REGISTER NOW</Link>
             </Form>
+            <p className='text-danger text-center mt-3'>
+                {error && error.message}
+            </p>
             <GoogleLogin></GoogleLogin>
         </div>
     );
