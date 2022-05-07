@@ -40,7 +40,7 @@ const Header = () => {
                         <nav className='d-flex justify-content-evenly align-items-center'>
                             <Link className='fs-5 text-decoration-none text-black' to="/manageinventories">Manage Items</Link>
                             <Link className='fs-5 text-decoration-none text-black' to="/addnewitem">Add Items</Link>
-                            <Link className='fs-5 text-decoration-none text-black' to="/">My Items</Link>
+                            <Link className='fs-5 text-decoration-none text-black' to="/myitems">My Items</Link>
                         </nav>
                         <hr className='mb-0' />
                     </div>

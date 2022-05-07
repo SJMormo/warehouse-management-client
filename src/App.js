@@ -1,5 +1,3 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
@@ -12,6 +10,9 @@ import RequireAuth from './components/RequireAuth/RequireAuth';
 import NotFound from './components/NotFound/NotFound';
 import ManageInventories from './components/ManageInventories/ManageInventories';
 import AddNewItem from './components/AddNewItem/AddNewItem';
+import { ToastContainer } from 'react-toastify';
+import MyItems from './components/MyItems/MyItems';
+
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/manageinventories" element={<ManageInventories />} />
         <Route path="/addnewitem" element={<AddNewItem />} />
+        <Route path="/myitems" element={<MyItems />} />
 
         <Route path="/inventory/:id" element={
           <RequireAuth>
@@ -34,6 +36,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
+      <ToastContainer />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Button, Card, Col, Form, ListGroup, ListGroupItem, Row } from 'react-bootstrap';
+import { Button, Card, Form, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 
 const InventoryDetail = () => {

@@ -3,6 +3,8 @@ import { Button, FloatingLabel, Form } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const AddNewItem = () => {
@@ -40,6 +42,7 @@ const AddNewItem = () => {
             })
 
         event.target.reset();
+        toast('New Inventory added successfully');
     }
 
     const [user, loading, error] = useAuthState(auth);
