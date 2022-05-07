@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import useInventories from '../../Hooks/useInventories';
 
 const ManageInventories = () => {
@@ -54,6 +55,9 @@ const ManageInventories = () => {
                         }
                     </tbody>
                 </table>
+            </div>
+            <div className='d-flex justify-content-center'>
+                <Link className='mt-1 w-25 btn btn-outline-dark' to="/addnewitem">Add New Item</Link>
             </div>
         </div >
     );

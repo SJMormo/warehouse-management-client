@@ -34,9 +34,12 @@ const InventoryDetail = () => {
     const reStockQuantityRef = useRef(0);
     const handleReStock = (event) => {
         event.preventDefault();
-        const stockQuantity = parseInt(reStockQuantityRef.current.value);
+        let stockQuantity = reStockQuantityRef.current.value;
+        stockQuantity = parseInt(stockQuantity);
+        quantity = parseInt(quantity);
         quantity += stockQuantity;
         // console.log(quantity, stockQuantity);
+        // return;
         sendDataToServer();
         event.target.reset();
     }
@@ -76,7 +79,7 @@ const InventoryDetail = () => {
 
             <Form onSubmit={handleReStock} className='mt-2 w-25 mx-auto'>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Restock The Items</Form.Label>
+                    <Form.Label>Restock The Item</Form.Label>
                     <Form.Control ref={reStockQuantityRef} type="number" placeholder="Enter quantity" required />
                 </Form.Group>
 
@@ -84,9 +87,6 @@ const InventoryDetail = () => {
                     Submit
                 </Button>
             </Form>
-            <div className='d-flex justify-content-center'>
-
-            </div>
         </div>
     );
 };

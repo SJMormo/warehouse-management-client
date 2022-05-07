@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Button, FloatingLabel, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
@@ -38,15 +38,13 @@ const Register = () => {
     return (
         <div>
             <Form onSubmit={handleRegister} className='w-50 mx-auto mt-3'>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
+                <FloatingLabel controlId="floatingInput" label="Email address" className="mb-3">
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
-                </Form.Group>
+                </FloatingLabel>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
+                <FloatingLabel controlId="floatingPassword" label="Password" className="mb-3">
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
-                </Form.Group>
+                </FloatingLabel>
 
                 <Button className='w-100' variant="dark" type="submit">
                     CREATE AN ACCOUNT

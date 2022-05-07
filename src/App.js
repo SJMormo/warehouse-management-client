@@ -9,6 +9,7 @@ import Login from './components/Login/Login';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import NotFound from './components/NotFound/NotFound';
 import ManageInventories from './components/ManageInventories/ManageInventories';
+import AddNewItem from './components/AddNewItem/AddNewItem';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/manageinventories" element={<ManageInventories />} />
+        <Route path="/addnewitem" element={<AddNewItem />} />
 
         <Route path="/inventory/:id" element={
           <RequireAuth>
