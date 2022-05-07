@@ -61,7 +61,6 @@ const Header = () => {
                             <Col sm={12} md={4}>
                                 <Link className='fs-5 text-decoration-none text-black' to="/myitems">My Items</Link>
                             </Col>
-
                         </Row>
                         <hr className='mb-0' />
                     </div>
