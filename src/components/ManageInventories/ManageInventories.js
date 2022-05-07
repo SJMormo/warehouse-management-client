@@ -1,7 +1,25 @@
 import useInventories from '../../Hooks/useInventories';
 
 const ManageInventories = () => {
-    const [inventories] = useInventories({});
+    const [inventories, setInventories] = useInventories({});
+
+    const handleDeleteInventory = id => {
+        const proceed = window.confirm('Are you sure you want to delete?');
+        if (proceed) {
+            console.log('deleting user with id', id);
+            fetch(`http://localhost:5000/manageinventories/${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deleteCount > 0) {
+                        // console.log(data);
+                        const remaining = inventories.filter(inventory => inventory._id !== id);
+                        setInventories(remaining);
+                    }
+                })
+        }
+    }
     return (
         <div>
             <h3 className='my-3 text-center'>Manage Inventories</h3>
@@ -23,14 +41,14 @@ const ManageInventories = () => {
                     <tbody className='text-center'>
                         {
                             inventories.map((inventory, index) =>
-                                < tr >
+                                <tr key={inventory._id}>
                                     <th scope="row">{index + 1}</th>
                                     <td>{inventory.name}</td>
                                     <td>{inventory.description}</td>
                                     <td>{inventory.price}</td>
                                     <td>{inventory.quantity}</td>
                                     <td>{inventory.supplierName}</td>
-                                    <td><button type="button" className="btn btn-danger">X</button></td>
+                                    <td><button onClick={() => handleDeleteInventory(inventory._id)} type="button" className="btn btn-danger">X</button></td>
                                 </tr>
                             )
                         }
