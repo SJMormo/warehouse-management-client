@@ -18,11 +18,8 @@ const Inventories = () => {
                 }
             </Row>
 
-            <div className='d-flex justify-content-center text-wrap'>
-
-            </div>
-            <div class="row">
-                <div class="col-sm-12 col-lg-6 mx-auto">
+            <div className="row">
+                <div className="col-sm-12 col-lg-6 mx-auto">
                     <Link className='mt-3 btn btn-dark w-50 d-block mx-auto' to="/manageinventories">Manage Inventories</Link>
                 </div>
             </div>

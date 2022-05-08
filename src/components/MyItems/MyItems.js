@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
@@ -22,16 +23,40 @@ const MyItems = () => {
                         const remaining = inventories.filter(inventory => inventory._id !== id);
                         setInventories(remaining);
                     }
-                })
+                });
         }
     }
 
 
     useEffect(() => {
-        const email = user?.email;
-        fetch(`http://localhost:5000/inventoryfilter?email=${email}`)
-            .then(res => res.json())
-            .then(data => setInventories(data));
+        // const email = user?.email;
+        // fetch(`http://localhost:5000/inventoryfilter?email=${email}`, {
+        //     headers: {
+        //         authorization: `Bearer ${localStorage.getItem('accessToken')}`
+        //     }
+        // })
+        //     .then(res => res.json())
+        //     .then(data => setInventories(data));
+
+
+        // 
+        const getMyItems = async () => {
+            const email = user.email;
+            const url = `http://localhost:5000/inventoryfilter?email=${email}`;
+
+            try {
+                const { data } = await axios.get(url, {
+                    headers: {
+                        authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                    }
+                });
+                setInventories(data);
+            } catch (error) {
+                console.log(error.message);
+            }
+        }
+        getMyItems();
+        //
     }, [user, handleDeleteInventory]);
 
     if (loading) {
