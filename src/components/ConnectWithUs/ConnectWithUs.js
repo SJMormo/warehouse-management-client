@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Col, FloatingLabel, Form, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -27,8 +26,8 @@ const ConnectWithUs = () => {
                             <FloatingLabel controlId="floatingInput" label="Email address" className="mb-3">
                                 <Form.Control type="email" placeholder="Enter email" required />
                             </FloatingLabel>
-                            <FloatingLabel controlId="floatingInput" label="Item Description" className="mb-3">
-                                <Form.Control as="textarea" type="text" placeholder="Item Description" required />
+                            <FloatingLabel controlId="floatingInput" label="Your message" className="mb-3">
+                                <Form.Control as="textarea" type="text" placeholder="Your message" />
                             </FloatingLabel>
                             <Button className='w-100' variant="outline-dark" type="submit">
                                 CONNECT
