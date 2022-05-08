@@ -37,6 +37,8 @@ const Register = () => {
         navigate('/login');
     }
 
+
+
     return (
         <div>
             <Form onSubmit={handleRegister} className='w-50 mx-auto mt-3'>
