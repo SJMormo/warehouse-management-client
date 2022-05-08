@@ -11,7 +11,7 @@ const Trust = () => {
         <div className='mt-5 container'>
             <Row xs={1} md={2} lg={4}>
                 <Col>
-                    <div className="card mb-3" >
+                    <div className="card mb-3 border-0" >
                         <div className="row g-0 d-flex align-items-center">
                             <div className="col-sm-2">
                                 <img src={img1} className="img-fluid rounded-start" alt="" />
@@ -26,7 +26,7 @@ const Trust = () => {
                     </div>
                 </Col>
                 <Col>
-                    <div className="card mb-3" >
+                    <div className="card mb-3 border-0" >
                         <div className="row g-0 d-flex align-items-center">
                             <div className="col-sm-2">
                                 <img src={img2} className="img-fluid rounded-start" alt="" />
@@ -41,7 +41,7 @@ const Trust = () => {
                     </div>
                 </Col>
                 <Col>
-                    <div className="card mb-3" >
+                    <div className="card mb-3 border-0" >
                         <div className="row g-0 d-flex align-items-center">
                             <div className="col-sm-2">
                                 <img src={img3} className="img-fluid rounded-start" alt="" />
@@ -56,7 +56,7 @@ const Trust = () => {
                     </div>
                 </Col>
                 <Col>
-                    <div className="card mb-3" >
+                    <div className="card mb-3 border-0" >
                         <div className="row g-0 d-flex align-items-center">
                             <div className="col-sm-2">
                                 <img src={img4} className="img-fluid rounded-start" alt="" />

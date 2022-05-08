@@ -8,7 +8,7 @@ const ManageInventories = () => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if (proceed) {
             console.log('deleting user with id', id);
-            fetch(`http://localhost:5000/manageinventories/${id}`, {
+            fetch(`https://warehouse-management-sjmormo.herokuapp.com/manageinventories/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

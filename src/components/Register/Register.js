@@ -5,6 +5,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import GoogleLogin from '../GoogleLogin/GoogleLogin';
 import Loading from '../Loading/Loading';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -16,15 +18,15 @@ const Register = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     const handleRegister = event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        console.log(email, password);
 
         createUserWithEmailAndPassword(email, password);
+        toast('Verification email sent');
     }
 
     if (loading) {

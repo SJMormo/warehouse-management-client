@@ -13,7 +13,7 @@ const InventoryDetail = () => {
         const updatedQuantity = { name, img, price, quantity, description, supplierName };
 
         // send data to server
-        fetch(`http://localhost:5000/updateQuantity/${id}`, {
+        fetch(`https://warehouse-management-sjmormo.herokuapp.com/updateQuantity/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -46,7 +46,7 @@ const InventoryDetail = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/inventory/${id}`)
+        fetch(`https://warehouse-management-sjmormo.herokuapp.com/inventory/${id}`)
             .then(res => res.json())
             .then(data => setInventoryDetail(data));
     }, [handleDelivery]);

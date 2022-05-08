@@ -13,7 +13,7 @@ const MyItems = () => {
         const proceed = window.confirm('Are you sure you want to delete?');
         if (proceed) {
             console.log('deleting user with id', id);
-            fetch(`http://localhost:5000/manageinventories/${id}`, {
+            fetch(`https://warehouse-management-sjmormo.herokuapp.com/manageinventories/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -30,7 +30,7 @@ const MyItems = () => {
 
     useEffect(() => {
         // const email = user?.email;
-        // fetch(`http://localhost:5000/inventoryfilter?email=${email}`, {
+        // fetch(`https://warehouse-management-sjmormo.herokuapp.com/inventoryfilter?email=${email}`, {
         //     headers: {
         //         authorization: `Bearer ${localStorage.getItem('accessToken')}`
         //     }
@@ -42,7 +42,7 @@ const MyItems = () => {
         // 
         const getMyItems = async () => {
             const email = user.email;
-            const url = `http://localhost:5000/inventoryfilter?email=${email}`;
+            const url = `https://warehouse-management-sjmormo.herokuapp.com/inventoryfilter?email=${email}`;
 
             try {
                 const { data } = await axios.get(url, {

@@ -29,7 +29,7 @@ const AddNewItem = () => {
         const newItem = { name, image, description, price, quantity, supplierName, email };
 
         // send newItem to server
-        fetch('http://localhost:5000/inventory', {
+        fetch('https://warehouse-management-sjmormo.herokuapp.com/inventory', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
