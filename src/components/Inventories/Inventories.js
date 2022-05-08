@@ -11,7 +11,7 @@ const Inventories = () => {
             <h6 className='text-center mb-5'>Explore the best selling perfumes of all times</h6>
             <Row xs={1} md={3} className="g-4">
                 {
-                    inventories.map(inventory => <Inventory
+                    inventories.slice(0, 6).map(inventory => <Inventory
                         key={inventory._id}
                         inventory={inventory}
                     ></Inventory>)

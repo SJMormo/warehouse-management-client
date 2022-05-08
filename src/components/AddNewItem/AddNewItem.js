@@ -20,13 +20,13 @@ const AddNewItem = () => {
         event.preventDefault();
         const email = emailRef.current.value;
         const name = nameRef.current.value;
-        const image = imageRef.current.value;
+        const img = imageRef.current.value;
         const description = descriptionRef.current.value;
         const price = priceRef.current.value;
         const quantity = quantityRef.current.value;
         const supplierName = supplierNameRef.current.value;
 
-        const newItem = { name, image, description, price, quantity, supplierName, email };
+        const newItem = { name, img, description, price, quantity, supplierName, email };
 
         // send newItem to server
         fetch('https://warehouse-management-sjmormo.herokuapp.com/inventory', {
@@ -45,7 +45,7 @@ const AddNewItem = () => {
         toast('New Inventory added successfully');
     }
 
-    const [user, loading, error] = useAuthState(auth);
+    const [user, loading] = useAuthState(auth);
 
     if (loading) {
         return <Loading></Loading>

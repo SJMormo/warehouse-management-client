@@ -16,17 +16,17 @@ const Footer = () => {
                     </Col>
                     <Col xs={4} md={3} className='d-flex flex-column text-center'>
                         <h3>Services</h3>
-                        <Link className='text-decoration-none' to="#">Writing</Link>
-                        <Link className='text-decoration-none' to="#">Internships</Link>
-                        <Link className='text-decoration-none' to="#">Coding</Link>
-                        <Link className='text-decoration-none' to="#">Teaching</Link>
+                        <Link className='text-decoration-none' to="#">Shipping</Link>
+                        <Link className='text-decoration-none' to="#">Online Payment</Link>
+                        <Link className='text-decoration-none' to="#">Physical Outlet</Link>
+                        <Link className='text-decoration-none' to="#">30 Day return policy</Link>
                     </Col>
                     <Col xs={4} md={3} className='d-flex flex-column text-center'>
                         <h3>Contact Us</h3>
-                        <Link className='text-decoration-none' to="#">Uttar Pradesh</Link>
-                        <Link className='text-decoration-none' to="#">Ahemdabad</Link>
-                        <Link className='text-decoration-none' to="#">Indore</Link>
-                        <Link className='text-decoration-none' to="#">Mumbai</Link>
+                        <Link className='text-decoration-none' to="#">Rajshahi</Link>
+                        <Link className='text-decoration-none' to="#">Ishwardi</Link>
+                        <Link className='text-decoration-none' to="#">Dhaka</Link>
+                        <Link className='text-decoration-none' to="#">Chittagong</Link>
                     </Col>
                     <Col xs={4} md={3} className='d-flex flex-column text-center'>
                         <h3>Social Media</h3>

@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Button, Card, Form, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const InventoryDetail = () => {
     const { id } = useParams();
@@ -27,8 +29,13 @@ const InventoryDetail = () => {
     }
 
     const handleDelivery = () => {
-        quantity = quantity - 1;
-        sendDataToServer();
+        if (quantity === 0) {
+            toast('All Items sold out');
+        }
+        else {
+            quantity = quantity - 1;
+            sendDataToServer();
+        }
     }
 
     const reStockQuantityRef = useRef(0);
